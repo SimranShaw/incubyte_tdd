@@ -9,22 +9,28 @@ class Spacecraft:
     # logic for movement of the spacecraft
 
     def move_forward(self):
-       
+        print("forward")
 
     def move_backward(self):
-        
+         print("backward")
+
 
     def rotate_left(self):        
-      
+        print("left")
+
 
     def rotate_right(self):
-        
+        print("right")
+
 
     def adjust_angle_up(self):
-       
+        print("up")
+
 
     def adjust_angle_down(self):
-        
+        print("down")
+
+
 
     # processing the user commands
     
@@ -47,3 +53,20 @@ class Spacecraft:
         # Displaying final position and direction
         print("Final Position:", (self.x, self.y, self.z))
         print("Final Direction:", self.direction)
+
+
+
+
+# Taking user input
+initial_position = (0, 0, 0)
+initial_direction = 'N'
+
+chandrayaan_3 = Spacecraft(*initial_position, initial_direction)
+
+while True:
+    k = input("Enter your command or Press e to EXIT !")
+    if k == "e":
+        break
+    else:
+        chandrayaan_3.process_commands(k)
+        
