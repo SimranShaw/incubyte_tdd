@@ -9,10 +9,32 @@ class Spacecraft:
     # logic for movement of the spacecraft
 
     def move_forward(self):
-        print("forward")
+        if self.direction == 'N':
+            self.y += 1
+        if self.direction == 'S':
+            self.y -= 1
+        if self.direction == 'W':
+            self.x += 1
+        elif self.direction == 'E':
+            self.x -= 1
+        if self.direction == 'U':
+            self.z += 1
+        elif self.direction == 'D':
+            self.z -= 1
 
     def move_backward(self):
-         print("backward")
+        if self.direction == 'N':
+            self.y -= 1
+        if self.direction == 'S':
+            self.y += 1
+        if self.direction == 'W':
+            self.x -= 1
+        elif self.direction == 'E':
+            self.x += 1
+        if self.direction == 'U':
+            self.z -= 1
+        elif self.direction == 'D':
+            self.z += 1
 
 
     def rotate_left(self):        
