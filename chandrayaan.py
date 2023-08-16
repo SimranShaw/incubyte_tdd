@@ -20,8 +20,7 @@ class Spacecraft:
         if self.direction == 'U':
             self.z += 1
         elif self.direction == 'D':
-            self.z -= 1
-        print(self.direction)
+            self.z -= 1        
 
     def move_backward(self):
         if self.direction == 'N':
@@ -36,9 +35,7 @@ class Spacecraft:
             self.z -= 1
         elif self.direction == 'D':
             self.z += 1
-        print(self.direction)
-
-
+        
     def rotate_left(self):        
         if self.direction == 'N':
             self.direction = 'W'
@@ -51,7 +48,6 @@ class Spacecraft:
         elif self.direction == 'U' or self.direction == 'D':
             self.direction = self.prevdirection
             self.rotate_left()
-        print(self.direction)
 
     def rotate_right(self):
         if self.direction == 'N':
@@ -65,20 +61,14 @@ class Spacecraft:
         elif self.direction == 'U' or self.direction == 'D':
             self.direction = self.prevdirection
             self.rotate_right()
-        print(self.direction)
-
 
     def adjust_angle_up(self):
         self.prevdirection = self.direction
         self.direction = 'U'
-        print(self.direction)
-
 
     def adjust_angle_down(self):
         self.prevdirection = self.direction
         self.direction = 'D'
-        print(self.direction)
-
 
     # processing the user commands
     
@@ -101,8 +91,6 @@ class Spacecraft:
         # Displaying final position and direction
         print("Final Position:", (self.x, self.y, self.z))
         print("Final Direction:", self.direction)
-
-
 
 
 # Taking user input
